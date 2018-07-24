@@ -1,0 +1,14 @@
+.chatroom-top__wrapper {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatroom-top__title {
+    color: #676767;
+}
+
+.chatroom-top__title > span {
+    color: #0875e7;
+}

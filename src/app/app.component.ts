@@ -8,12 +8,15 @@ import { ApiServiceService } from 'src/app/api-service.service';
 })
 export class AppComponent {
   users: any;
+  chatroomTitle: string;
+
   //implement sockets here perhaps
   constructor(api: ApiServiceService) {
     api.getUsers().subscribe((resp) => {
       this.users = resp.users;
       console.log(this.users);
-    })
+    });
+    this.chatroomTitle = 'Front-End Madness';
   }
 
 }

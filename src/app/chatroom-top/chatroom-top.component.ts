@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chatroom-top',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chatroom-top.component.css']
 })
 export class ChatroomTopComponent implements OnInit {
+
+  @Input() title: string;
+  @Input() numberOfParticipants: string;
 
   constructor() { }
 

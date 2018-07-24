@@ -1,8 +1,8 @@
 <div class="app__wrapper">
   <app-side-menu class="side__wrapper" [users]="users"></app-side-menu>
   <div class="chatroom__wrapper">
-    <app-chatroom-top></app-chatroom-top>
-    <app-chat></app-chat>
-    <app-input-bar></app-input-bar>
+    <app-chatroom-top [title]="chatroomTitle" [numberOfParticipants]="users ? users.length : 0"></app-chatroom-top>
+    <app-chat class="chat__wrapper"></app-chat>
+    <app-input-bar class="input-bar__wrapper"></app-input-bar>
   </div>
 </div>

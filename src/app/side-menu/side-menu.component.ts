@@ -18,7 +18,6 @@ export class SideMenuComponent implements OnInit {
       lastName: 'Smith',
       profilePic: 'picture-1'
     }
-    console.log(this.users);
   }
 
   ngOnInit() {

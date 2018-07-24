@@ -1,0 +1,40 @@
+.input-bar__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.input-bar__icon_container {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-bar__attachement {
+    font-size: 3rem;
+    transform: rotate(90deg);
+    color: #b5b5b5;
+}
+
+.input-bar__emoji {
+    font-size: 3rem;
+    color: #b5b5b5;
+}
+
+.input-bar__delimiter {
+    margin-top: 5px;
+    height: 60px;
+    width: 1px;
+    background-color: #b5b5b5;
+}
+
+.input-bar__input {
+    width: calc(100% - 202px);
+    height: 100%;
+    border: 0;
+    padding: 0 15px;
+    font: 400 1.5rem Tahoma;
+    outline: none;
+}
