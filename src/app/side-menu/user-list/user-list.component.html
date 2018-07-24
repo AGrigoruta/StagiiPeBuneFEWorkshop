@@ -1,0 +1,11 @@
+<div class="user-list__wrapper" id="custom-scrollbar">
+  <div *ngFor="let user of users" class="user-list__user">
+    <img class="user-list__user_pic" src="../../../assets/images/{{user.profilePic}}.jpg">
+    <div class="user-list__user_info">
+      <span>{{user.firstName}} {{user.lastName}}</span>
+      <div class="user-list__user_status">
+        <div class="user-list__user-online"></div><span>online</span>
+      </div>
+    </div>
+  </div>
+</div>

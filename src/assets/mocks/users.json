@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "firstName": "John",
+            "lastName": "Smith",
+            "profilePic": "picture-1"
+        },
+        {
+            "firstName": "Diana",
+            "lastName": "Meyer",
+            "profilePic": "picture-2"
+        },
+        {
+            "firstName": "Louis",
+            "lastName": "Wheeler",
+            "profilePic": "picture-3"
+        },
+        {
+            "firstName": "Michelle",
+            "lastName": "Canon",
+            "profilePic": "picture-4"
+        },
+        {
+            "firstName": "James",
+            "lastName": "Ford",
+            "profilePic": "picture-5"
+        },
+        {
+            "firstName": "Joseph",
+            "lastName": "Lowry",
+            "profilePic": "picture-6"
+        },
+        {
+            "firstName": "Pamela",
+            "lastName": "Hughes",
+            "profilePic": "picture-7"
+        }
+    ]
+}

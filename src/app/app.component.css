@@ -1,0 +1,19 @@
+.app__wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* align-items: space-between; */
+}
+
+.chatroom__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.side__wrapper {
+    background-color: #0875e7;
+    width: 20%;
+    height: 100%;
+    border: 1px transparent;
+    border-radius: 0px 10px 10px 0px;
+}

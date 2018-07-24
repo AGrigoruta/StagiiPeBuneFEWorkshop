@@ -1,0 +1,55 @@
+.side__header {
+    height: 100px;
+    width: 100%;
+}
+
+.side__title {
+    height: 80%;
+    color: #fff;
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.side__greet {
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center
+}
+
+.side__inputs {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; 
+}
+
+.side__input_new {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.side__input_search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.side__input_icon {
+    position: absolute;
+    right: calc(15% - 10px);
+    bottom: 7px;
+}
+
+.side__input_aesthetics {
+    height: 1.5rem;
+    width: 70%;
+    border: 1px transparent;
+    border-radius: 3px;
+    padding: 3px 20px 3px 10px;
+    font: 400 1rem Tahoma;
+}
