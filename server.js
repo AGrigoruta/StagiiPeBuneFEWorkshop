@@ -16,10 +16,10 @@ mongoose.connect(dbConfig.url, function (err) {
   console.info('Connected to DB.');
 });
 
-app.use(express.static('public'));
+app.use(express.static('dist'));
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/dist/index.html');
 });
 
 require('./server/routes')(app);
