@@ -13,10 +13,13 @@ export class AppComponent {
   //implement sockets here perhaps
   constructor(api: ApiServiceService) {
     api.getUsers().subscribe((resp) => {
-      this.users = resp.users;
-      console.log(this.users);
+      this.users = resp;
     });
     this.chatroomTitle = 'Front-End Madness';
   }
 
+  handleUserLog(event: Event) {
+    console.log(event);
+    this.users.unshift(event);
+  }
 }

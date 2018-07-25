@@ -12,6 +12,10 @@
     align-items: center;
 }
 
+.input-bar__icon_container:hover {
+    background-color: #f7f7f7;
+}
+
 .input-bar__attachement {
     font-size: 3rem;
     transform: rotate(90deg);

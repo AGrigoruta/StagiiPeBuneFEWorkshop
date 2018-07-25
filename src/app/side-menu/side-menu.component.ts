@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,23 +10,28 @@ export class SideMenuComponent implements OnInit {
 
   userLogged: boolean;
   user: any;
+  username: string;
   @Input() users: any;
+  @Output() userLogChange: EventEmitter<any> = new EventEmitter;
 
-  constructor() {
+  constructor(private api: ApiServiceService) {
     this.userLogged = false;
-    this.user = {
-      firstName: 'John',
-      lastName: 'Smith',
-      profilePic: 'picture-1'
-    }
+    this.user = {};
   }
 
   ngOnInit() {
   }
 
-  logUser(firstName: String, lastName: String) {
-    //do back-end call and get data from there then add it here as an Object
-    this.userLogged = true;
+  logUser() {
+    let firstName = this.username.substring(0, this.username.indexOf(' '));
+    let lastName = this.username.substring(this.username.indexOf(' '), this.username.length).trim();
+    let profilePic = `picture-${Math.floor(Math.random() * 6) + 1}`;
+    this.user = {firstName, lastName, profilePic}
+    this.api.newUser(this.user).subscribe((resp) => {
+      this.userLogged = true;
+      this.username = '';
+      this.userLogChange.emit(this.user);
+    });
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="app__wrapper">
-  <app-side-menu class="side__wrapper" [users]="users"></app-side-menu>
+  <app-side-menu class="side__wrapper" [users]="users" (userLogChange)="handleUserLog($event)"></app-side-menu>
   <div class="chatroom__wrapper">
     <app-chatroom-top [title]="chatroomTitle" [numberOfParticipants]="users ? users.length : 0"></app-chatroom-top>
     <app-chat class="chat__wrapper"></app-chat>
