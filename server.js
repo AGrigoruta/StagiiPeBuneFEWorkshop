@@ -29,4 +29,7 @@ var server = app.listen(process.env.PORT || 3000, function () {
   console.info('\nServer ready on port %d\n', server.address().port);
 });
 
-module.exports = app;
+//Attach chat component
+require('./server/config/chat')(server);
+
+// module.exports = app;
