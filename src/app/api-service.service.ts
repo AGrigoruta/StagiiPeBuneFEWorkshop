@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
-// import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -30,7 +28,6 @@ export class ApiServiceService {
       lastName: user.lastName,
       profilePic: user.profilePic
     };
-    console.log(payload);
     return this.http.post(url, payload, {responseType: 'text'});
   }
 }

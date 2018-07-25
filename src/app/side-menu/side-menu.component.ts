@@ -11,6 +11,8 @@ export class SideMenuComponent implements OnInit {
   userLogged: boolean;
   user: any;
   username: string;
+  searchQuery: string;
+  @Input() backupUsers: any;
   @Input() users: any;
   @Output() userLogChange: EventEmitter<any> = new EventEmitter;
 
@@ -32,6 +34,18 @@ export class SideMenuComponent implements OnInit {
       this.username = '';
       this.userLogChange.emit(this.user);
     });
+  }
+
+  handleSearch() {
+    this.users = [];
+    if (this.searchQuery.length === 0) {
+      this.users = Object.assign([], this.backupUsers);
+    } else {
+      this.users = this.backupUsers.filter((item) => {
+        return (item.firstName.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+          item.lastName.toLowerCase().includes(this.searchQuery.toLowerCase()))
+      });
+    }
   }
 
 }

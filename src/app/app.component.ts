@@ -19,7 +19,6 @@ export class AppComponent {
   }
 
   handleUserLog(event: Event) {
-    console.log(event);
     this.users.unshift(event);
   }
 }

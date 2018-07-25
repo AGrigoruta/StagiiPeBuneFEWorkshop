@@ -10,7 +10,7 @@
     <span (click)="logUser()" class="side__input_icon"><i class="fas fa-plus"></i></span>
   </div>
   <div class="side__input_search">
-    <input class="side__input_aesthetics" placeholder="Search people...">
+    <input class="side__input_aesthetics" placeholder="Search people..." [(ngModel)]="searchQuery" (ngModelChange)="handleSearch()">
     <span class="side__input_icon">
       <i class="fas fa-search"></i>
     </span>
