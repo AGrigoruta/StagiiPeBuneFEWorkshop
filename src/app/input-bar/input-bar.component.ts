@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChatService } from '../chat.service';
 
 @Component({
   selector: 'app-input-bar',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputBarComponent implements OnInit {
 
-  constructor() { }
+  @Input() chatService: ChatService;
+  @Input() userLogged: boolean;
+  message: string;
 
-  ngOnInit() {
+  constructor() {
+  }
+
+  ngOnInit() { 
+    document.getElementById('input-bar__input').addEventListener('keyup', this.sendMessage.bind(this));
+  }
+
+  sendMessage(event) {
+    if(event.keyCode === 13) {
+      let payload = {
+        user: this.chatService.getUser(),
+        message: this.message,
+        timestamp: new Date().getTime()
+      }
+      this.chatService.sendMessage(payload);
+      this.message = '';
+    }
   }
 
 }

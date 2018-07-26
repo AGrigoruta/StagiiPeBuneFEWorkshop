@@ -8,7 +8,7 @@ module.exports = function (server) {
 
     io.on('connection', function (socket) {
 
-        console.info('Test');
+        console.info('User connected');
 
         socket.on('register', function (msg) {
             //Inform new user about who is logged in
@@ -23,7 +23,7 @@ module.exports = function (server) {
         });
 
         socket.on('message', function (msg) {
-            console.info('Sent message from user %s .', msg.sender);
+            console.info('Sent message from user %s %s.', msg.user.firstName, msg.user.lastName);
             io.emit('message', msg);
         });
 

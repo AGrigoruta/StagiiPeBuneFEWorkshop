@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiServiceService } from 'src/app/api-service.service';
+import { ChatService } from './chat.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,15 @@ import { ApiServiceService } from 'src/app/api-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  user: any;
   users: any;
+  userLogged: boolean;
   chatroomTitle: string;
+  chat: ChatService = new ChatService();
 
   //implement sockets here perhaps
   constructor(api: ApiServiceService) {
+    this.userLogged = false;
     api.getUsers().subscribe((resp) => {
       this.users = resp;
     });
@@ -20,5 +25,8 @@ export class AppComponent {
 
   handleUserLog(event: Event) {
     this.users.unshift(event);
+    this.user = event;
+    this.userLogged = true;
+    this.chat.setUser(this.user);
   }
 }

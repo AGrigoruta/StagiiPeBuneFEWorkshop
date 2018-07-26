@@ -32,4 +32,4 @@ var server = app.listen(process.env.PORT || 3000, function () {
 //Attach chat component
 require('./server/config/chat')(server);
 
-// module.exports = app;
+module.exports = app;

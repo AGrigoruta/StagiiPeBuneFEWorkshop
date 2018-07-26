@@ -2,7 +2,7 @@
   <app-side-menu class="side__wrapper" [users]="users" [backupUsers]="users" (userLogChange)="handleUserLog($event)"></app-side-menu>
   <div class="chatroom__wrapper">
     <app-chatroom-top [title]="chatroomTitle" [numberOfParticipants]="users ? users.length : 0"></app-chatroom-top>
-    <app-chat class="chat__wrapper"></app-chat>
-    <app-input-bar class="input-bar__wrapper"></app-input-bar>
+    <app-chat [chatService]="chat" class="chat__wrapper"></app-chat>
+    <app-input-bar [userLogged]="userLogged" [chatService]="chat" class="input-bar__wrapper"></app-input-bar>
   </div>
 </div>

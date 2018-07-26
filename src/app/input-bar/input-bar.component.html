@@ -3,7 +3,7 @@
     <i class="fas fa-paperclip input-bar__attachement"></i>    
   </div>
   <div class="input-bar__delimiter"></div>
-  <input class="input-bar__input" placeholder="Type all your creativity and imagination...">
+  <input id="input-bar__input" class="input-bar__input" placeholder="Type all your creativity and imagination..." [(ngModel)]="message" [disabled]="!userLogged">
   <div class="input-bar__delimiter"></div>
   <div class="input-bar__icon_container">
     <i class="far fa-smile input-bar__emoji"></i>
