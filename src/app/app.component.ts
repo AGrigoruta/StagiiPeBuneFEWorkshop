@@ -17,10 +17,16 @@ export class AppComponent {
   //implement sockets here perhaps
   constructor(api: ApiServiceService) {
     this.userLogged = false;
+
     api.getUsers().subscribe((resp) => {
       this.users = resp;
     });
+
     this.chatroomTitle = 'Front-End Madness';
+    
+    this.chat.getUsers().subscribe((user) => {
+        this.users.unshift(user);
+    });
   }
 
   handleUserLog(event: Event) {
@@ -28,5 +34,6 @@ export class AppComponent {
     this.user = event;
     this.userLogged = true;
     this.chat.setUser(this.user);
+    this.chat.newUser(this.user);
   }
 }

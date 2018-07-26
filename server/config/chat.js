@@ -1,7 +1,5 @@
 var Server = require('socket.io');
 
-var sockets = {};
-
 module.exports = function (server) {
 
     var io = new Server(server);
@@ -11,15 +9,8 @@ module.exports = function (server) {
         console.info('User connected');
 
         socket.on('register', function (msg) {
-            //Inform new user about who is logged in
-            socket.emit('online-users', Object.keys(sockets));
-
-            //Add user's socket
-            sockets[msg.user] = socket;
-
             //Inform all users that new user is online
-            socket.broadcast.emit('user-online', { user: msg.user });
-
+            socket.broadcast.emit('user-online', msg);
         });
 
         socket.on('message', function (msg) {
@@ -32,7 +23,3 @@ module.exports = function (server) {
         });
     });
 };
-
-module.exports.deleteSocket = function (user) {
-    delete sockets[user];
-}

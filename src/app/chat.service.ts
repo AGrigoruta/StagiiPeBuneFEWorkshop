@@ -34,4 +34,16 @@ export class ChatService {
           });
       });
   }
+
+  public newUser(user) {
+    this.socket.emit('register', user);
+  }
+
+  public getUsers = () => {
+    return Observable.create((observer) => {
+        this.socket.on('user-online', (user) => {
+            observer.next(user);
+        });
+    });
+  }
 }

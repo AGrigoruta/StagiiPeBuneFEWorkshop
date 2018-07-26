@@ -9,8 +9,12 @@ import { ChatService } from '../chat.service';
 export class ChatComponent implements OnInit {
 
   @Input() chatService: ChatService;
-  
-  constructor() { }
+  // Declare needed variables to display messages 
+
+  constructor() {
+    // Write function to retrieve messages, both in the database and live ones
+    // Hint: look at app.component
+  }
 
   ngOnInit() {
   }
