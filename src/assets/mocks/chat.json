@@ -1,0 +1,53 @@
+{
+    "chat": [
+        {
+            "firstName": "John",
+            "lastName": "Smith",
+            "profilePic": "picture-1",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        },
+        {
+            "firstName": "Diana",
+            "lastName": "Meyer",
+            "profilePic": "picture-2",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        },
+        {
+            "firstName": "Louis",
+            "lastName": "Wheeler",
+            "profilePic": "picture-3",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        },
+        {
+            "firstName": "Michelle",
+            "lastName": "Canon",
+            "profilePic": "picture-4",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        },
+        {
+            "firstName": "James",
+            "lastName": "Ford",
+            "profilePic": "picture-5",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        },
+        {
+            "firstName": "Joseph",
+            "lastName": "Lowry",
+            "profilePic": "picture-6",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        },
+        {
+            "firstName": "Pamela",
+            "lastName": "Hughes",
+            "profilePic": "picture-7",
+            "message": "Not creepy at all!",
+            "timestamp": 1532607958
+        }
+    ]
+}

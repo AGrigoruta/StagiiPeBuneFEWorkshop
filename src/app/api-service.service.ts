@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ApiServiceService {
 
   private apiUrl = '/users';
+  private chatUrl = '/chat';
 
   constructor(private http: HttpClient) { }
 
@@ -29,5 +30,18 @@ export class ApiServiceService {
       profilePic: user.profilePic
     };
     return this.http.post(url, payload, {responseType: 'text'});
+  }
+
+  getMessages(): Observable<any> {
+    let url = this.chatUrl;
+    if (environment.production === false) {
+      url = '../assets/mocks/chat.json';
+    }
+    return this.http.get(url);
+  }
+
+  newMessage(message: any) {
+    let url = this.chatUrl;
+    return this.http.post(url, message, {responseType: 'text'});
   }
 }

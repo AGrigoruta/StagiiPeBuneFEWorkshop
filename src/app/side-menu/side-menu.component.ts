@@ -29,7 +29,8 @@ export class SideMenuComponent implements OnInit {
     let lastName = this.username.substring(this.username.indexOf(' '), this.username.length).trim();
     let profilePic = `picture-${Math.floor(Math.random() * 6) + 1}`;
     this.user = {firstName, lastName, profilePic}
-    this.api.newUser(this.user).subscribe((resp) => {
+    this.api.newUser(this.user).subscribe((resp: string) => {
+      this.user.id = resp.substring(resp.indexOf('user') + 4, resp.indexOf('.')).trim();
       this.userLogged = true;
       this.username = '';
       this.userLogChange.emit(this.user);

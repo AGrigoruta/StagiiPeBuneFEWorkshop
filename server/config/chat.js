@@ -14,7 +14,7 @@ module.exports = function (server) {
         });
 
         socket.on('message', function (msg) {
-            console.info('Sent message from user %s %s.', msg.user.firstName, msg.user.lastName);
+            console.info('Sent message from user %s %s.', msg.firstName, msg.lastName);
             io.emit('message', msg);
         });
 
