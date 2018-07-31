@@ -7,6 +7,19 @@
 * Open a browser and go to localhost:3000
 * Have fun breaking the app :D
 
+## How to get to a different branch
+* Open a git bash/ command prompt/ visual studio code terminal in the root of this project
+* If you have changes that you want to discard:
+  * git add .
+  * git reset --hard HEAD
+* If you have changes that you want to keep for later
+  * git add .
+  * git stash
+* Type in git fetch
+* Type in git checkout workshop-step4-stable
+* You are now in the same stable step as we got at the end of the workshop!
+* Have fun playing around and tinkering!
+
 ## Requirements
 * Browser
 * Code Editor (VScode, Sublime, other...)
