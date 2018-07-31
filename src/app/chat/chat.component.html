@@ -1,4 +1,13 @@
 <div class="chat__background">
+  <div class="chat__message" *ngFor="let message of messages" [ngClass]="{'chat__message_incoming': !message.me, 'chat__message_outgoing': message.me}">
+    <div>
+      picture placeholder
+    </div>
+    <div class="chat__message-box" [ngClass]="{'chat__message-box_incoming': !message.me, 'chat__message-box_outgoing': message.me}">
+      <div class="chat__message-box_message"><span>{{message.message}}</span></div>
+      <div class="chat__message-box_user">{{message.firstName}} {{message.lastName}}</div>
+    </div>
+  </div>
   <!-- insert chat code here -->
   <!-- hint: write an *ngFor in which you iterate through the message list -->
   <!-- hint2: make validations if you sent the message or not and append different css classes -->

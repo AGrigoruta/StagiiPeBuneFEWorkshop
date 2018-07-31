@@ -1,7 +1,49 @@
 .chat__background {
     height: 100%;
     width: 100%;
+    background-color: #d2d2d2;
+    overflow: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
     /* insert background color here */
+}
+.chat__message {
+    display: flex;
+    padding: 10px;
+}
+
+.chat__message_incoming {
+    flex-direction: row;
+}
+
+.chat__message_outgoing {
+    flex-direction: row-reverse;
+}
+
+.chat__message-box {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 50%;
+}
+
+.chat__message-box_incoming {
+    background-color: #fff;
+    color: #000;
+}
+
+.chat__message-box_outgoing {
+    background-color: #0875e7;
+    color: #fff;
+}
+
+.chat__message-box_message {
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.chat__message-box_user {
+    width: 100%;
 }
 
 /* add all the classes needed to style the messages */
